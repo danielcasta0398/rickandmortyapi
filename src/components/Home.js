@@ -7,15 +7,14 @@ import axios from 'axios';
 
 const Home = () => {
 
-
-    const random = Math.floor(Math.random()*126+1)
+    const random = Math.floor(Math.random()*126+1)   
     const urlApi = `https://rickandmortyapi.com/api/location/${random}`
     const [ key , setKey ] = useState({})      
     
-    useEffect ( () => {        
+    useEffect ( () => {                        
         axios.get(urlApi)
         .then ( e => setKey(e.data) )
-    },[ urlApi ] )
+    },[""])
    
 
 
