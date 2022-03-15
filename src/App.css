@@ -126,4 +126,13 @@ img{
 
 .search-input{
   width: 100%;
+  margin-right: 10px;
+}
+
+@media (max-width: 400px) {
+ 
+.search{
+  width: 70%;
+}
+
 }
