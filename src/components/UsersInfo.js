@@ -12,7 +12,7 @@ const UsersInfo = ( {usersUrl} ) => {
     useEffect( () => {
         axios.get(usersUrl)
         .then(res => setInfoUser(res.data))
-    },[] )
+    },[ usersUrl ] )
 
     return (   
             
