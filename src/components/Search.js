@@ -4,11 +4,16 @@ import axios from 'axios';
 
 const Search = ( {url, setKey} ) => {
 
-   const [ search, setSearch ] = useState("3")    
+   const [ search, setSearch ] = useState("") 
+  
 
-   const searchtype = () => {
+   const searchtype = e => {
+       e.preventDefault()
     axios.get(url + search )
-    .then( res => setKey(res.data) )
+    .then( res => {
+        console.log(res);
+        setKey(res.data) 
+    })
    }
 
    
@@ -19,7 +24,7 @@ const Search = ( {url, setKey} ) => {
              <div  >
                 <form className='search' action="">
                  <input className='search-input' type="text" onChange={e => setSearch(e.target.value)} />
-                 <button  type='submit' onClick={ searchtype }><i className="fa-solid fa-magnifying-glass"></i></button>
+                 <button  onClick={ searchtype }><i className="fa-solid fa-magnifying-glass"></i></button>
                 </form>
                 
              </div>

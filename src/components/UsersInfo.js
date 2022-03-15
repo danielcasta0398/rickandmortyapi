@@ -5,14 +5,14 @@ import { useEffect } from 'react';
 
 const UsersInfo = ( {usersUrl} ) => {
 
-    const [ infoUser , setInfoUser ] = useState()
+    const [ infoUser , setInfoUser ] = useState(0)
       
      
      
     useEffect( () => {
         axios.get(usersUrl)
         .then(res => setInfoUser(res.data))
-    },[ usersUrl ] )
+    },[] )
 
     return (   
             
@@ -21,8 +21,8 @@ const UsersInfo = ( {usersUrl} ) => {
          <div className="text-info">
           <p> <b> {infoUser?.name} </b> </p>
           <p><b>Status:</b> {infoUser?.status} </p>
-          <p><b>Origin: </b> {infoUser?.origin.name} </p>
-          <p><b>Number Episode: </b> {infoUser?.episode.length} </p>
+          <p><b>Origin: </b> {infoUser?.origin?.name} </p>
+          <p><b>Number Episode: </b> {infoUser?.episode?.length} </p>
          </div>
 
       </div> 

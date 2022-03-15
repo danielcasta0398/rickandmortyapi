@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from 'react';
 import { useState } from 'react';
 import Search from './Search';
@@ -7,8 +8,8 @@ const Home = () => {
 
     const urlApi = 'https://rickandmortyapi.com/api/location/'
     const [ key , setKey ] = useState({})  
-
     
+    console.log(key)
 
     return (
         <div className='all-info'>            
