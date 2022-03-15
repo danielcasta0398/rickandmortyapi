@@ -1,14 +1,23 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Search from './Search';
 import UsersList from './UsersList';
+import axios from 'axios';
+
 
 const Home = () => {
 
-    const urlApi = 'https://rickandmortyapi.com/api/location/'
-    const [ key , setKey ] = useState({})  
+
+    const random = Math.floor(Math.random()*126+1)
+    const urlApi = `https://rickandmortyapi.com/api/location/${random}`
+    const [ key , setKey ] = useState({})      
     
-    console.log(key)
+    useEffect ( () => {        
+        axios.get(urlApi)
+        .then ( e => setKey(e.data) )
+    },[] )
+   
+
 
     return (
         <div className='all-info'>            

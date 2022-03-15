@@ -3,13 +3,14 @@ import UsersInfo from './UsersInfo';
 
 const UsersList = ( {keyUsers} ) => {
     
-
+console.log(keyUsers)
+      
     return (
         <div className='principal' key={keyUsers}>
            {
                keyUsers?.map( user => (
                  <UsersInfo usersUrl = {user} key={ user } /> 
-               ) )
+               )  )
            }
         </div>
     );
