@@ -4,8 +4,7 @@ import axios from 'axios';
 
 const Search = ( {url, setKey} ) => {
 
-   const [ search, setSearch ] = useState("3") 
-   const [ typeUsers, setTypeUsers ] = useState("") 
+   const [ search, setSearch ] = useState("3")    
 
    const searchtype = () => {
     axios.get(url + search )
