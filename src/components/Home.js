@@ -15,7 +15,7 @@ const Home = () => {
     useEffect ( () => {        
         axios.get(urlApi)
         .then ( e => setKey(e.data) )
-    },[] )
+    },[ urlApi ] )
    
 
 
