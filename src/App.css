@@ -96,7 +96,7 @@ img{
   margin-top: 2.5rem;
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax( 250px, 1fr ));
+  grid-template-columns: repeat(auto-fill, minmax( 400px, 1fr ));
   grid-template-rows: 1fr;  
  
 }
@@ -111,15 +111,16 @@ img{
 }
 
 .text-info{
-
+  
+  width: 100%;
   padding: 1rem;
   color: white;
   font-family: 'Patrick Hand', cursive;
-  font-size: 14px;  
+  font-size: 16px;  
 }
 
 .images img{
-  width: 100%;
+  width: 135px;
   height: 100%;
   border-radius: 15px 0px 0px 15px;
 }
@@ -129,10 +130,36 @@ img{
   margin-right: 10px;
 }
 
-@media (max-width: 400px) {
+.content-location{   
+   margin: auto;
+   margin-top: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background: white;
+  padding: 1rem;
+  border-radius: 30px;
+  font-family: 'Patrick Hand', cursive;
+  width: 60%;
+}
+
+.title-locationinfo{
+  text-align: center;
+}
+
+.card-location{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+ 
+}
+
+@media (max-width: 850px) {
  
 .search{
   width: 70%;
+}
+
+.card-location{
+  flex-wrap: wrap;
 }
 
 }

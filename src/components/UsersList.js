@@ -3,7 +3,6 @@ import UsersInfo from './UsersInfo';
 
 const UsersList = ( {keyUsers} ) => {
     
-console.log(keyUsers)
       
     return (
         <div className='principal' key={keyUsers}>
